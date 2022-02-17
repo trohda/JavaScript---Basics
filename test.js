@@ -1,16 +1,37 @@
-//Slice method
+var myArray = []; //empty array
 
-var str = "hello, world";
+myArray[0] = 25;
 
-var str2 = str.slice(2, 9); //start at position 2 and end at 9
-console.log(str2);
+console.log(myArray);
+console.log(myArray[0]);
 
-var str3 = str.slice(2); //start at position 2 and end at the end because end is not defined
-console.log(str3); 
+myArray[1] = 35;
+myArray[2] = true;
+myArray[3] = "hello";
 
-//Split method
+console.log(myArray);
+console.log(myArray[0]);
+console.log(myArray[2]);
+console.log(myArray[3]);
 
-var tags = "meat, ham, salami, pork, beef, chicken";
-var tagsArray = tags.split(","); //everytime you see , add text array element
 
-console.log(tagsArray);
+//update value 
+myArray[2] = false; //update position 2
+
+console.log(myArray);
+console.log(myArray[2]);
+
+//concept of new array
+var myArray2 = [10,20,"hi",false];
+console.log(myArray2);
+
+var myArray3 = new Array(); //create new instant of array object - the same result as var myArra3 = [] 
+
+var myArray4 = new Array(5); //we can specify how many things we want in array
+
+//property of arrays
+console.log(myArray2.length); //4
+
+//methods of arrays
+console.log(myArray2.sort()); //from   10, 20, 'hi', false     to     10, 20, false, 'hi'   
+console.log(myArray2.reverse());
