@@ -1,45 +1,26 @@
-//Keyword THIS - refers to whatever object currently owns that space that we use to THIS keyword in
 
+//costructor function (constructor fon new objects car):
 
-console.log(this); //window is an object that keyword THIS refer to
+var Car = function(maxSpeed, driver){
 
-var myCar2 = {
-    
-    maxSpeed: 70, 
-    driver:"Tomek", 
-    drive:function(speed, time){
+    this.maxSpeed = maxSpeed;
+    this.driver = driver;
+    this.drive = function(speed, time){
         console.log(speed * time);
-    },
-    test:function(){
-        console.log(this);
-    }
-
-};
-
-
-
-var myCar3 = {
-    
-    maxSpeed: 70, 
-    driver:"Shaun", 
-    drive:function(speed, time){
-        console.log(speed * time);
-    },
-    test:function(){
-        console.log(this);
-        /*console.log(myCar3);  //its the same and U can use this but it have meaning in creating a function  */
-    },
-    logDriver:function(){
+    };
+    this.logDriver = function(){
         console.log("Driver name is " + this.driver);
-    }
+    };
 
-};
+}
 
 
-myCar2.test();
-myCar3.test();
-console.log(myCar2.maxSpeed);
-myCar2.drive(50,3);
+//creating new objects Car
+var myCar = new Car(70, "Tomek");
+var myCar2 = new Car(50, "Ninja");
+var myCar3 = new Car(90, "Shaun");
+var myCar4 = new Car(170, "James Bond");
+
+//testing
+myCar.drive(30,5);
 myCar3.logDriver();
-
-
