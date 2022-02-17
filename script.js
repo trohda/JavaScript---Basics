@@ -1,22 +1,45 @@
-function getAverage (a,b){
+/*
+var a = "7";
+var b = 5;
 
-    var average = (a+b)/2;  //local variable
-    console.log(average);
-    return average;
+    console.log(a + b); // 75 konkatenacja
+
+var a = "apple";
+var b = 5;
+
+    console.log(a + b); //apple5 konkatenacja
+
+    var a = "apple";
+    var b = 5;
+    
+        console.log(a * b); //NaN not a number
+
+*/
+
+var a = "apple";
+var b = 5;
+
+
+/*
+if(isNaN(a)){
+
+    console.log("That aint even a number!")
+
+}else{
+
+    console.log("Result: "+(a+b))
 
 }
+*/
 
 
-var myResult = getAverage(7, 11);  //global variable
+//double negative:
+if(!isNaN(a)){
 
+    console.log("That aint even a number!")
 
-/*console.log(average);  //error*/
+}else{
 
-function logResults(){
-
-    console.log("The average is " + myResult + " inside the function");
-
+    console.log("Result: "+(a+b))
 
 }
-
-logResults();
