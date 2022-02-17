@@ -1,15 +1,30 @@
-/*
-var myCar = new Car(); //create new instant of a Car object - (object Car is not define) - its example
-myCar.length, myCar.topSpeed //example of property of object myCar
-myCar.drive() , myCar.break() //example of methods(functions) of object myCar
-*/
+var myArray = [];
+myArray [0] = 8;
+myArray [0] = "hello";
 
-var myString = new String();
-myString = "hello";
-console.log(myString.length);
-console.log(myString.toLocaleUpperCase());
 
-var myString2 = new String();
-myString2 = "hi there";
-console.log(myString2.length);
-console.log(myString2.toLocaleUpperCase());
+
+
+var myCar = new Object(); //creating new Object
+myCar.maxSpeed = 50;       //creating a properties of an object myCar
+myCar.driver = "Shaun";   //creating a properties of an object myCar
+console.log(myCar.driver);
+
+myCar.drive = function(){console.log("Now driving");};
+myCar.drive();
+
+
+
+var myCar2 = {
+    
+    maxSpeed: 70, 
+    driver:"Tomek", 
+    drive:function(speed, time){
+        console.log(speed * time);
+    } 
+
+};
+
+console.log(myCar2.maxSpeed);
+myCar2.drive(50,3);
+
