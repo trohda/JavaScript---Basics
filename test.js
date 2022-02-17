@@ -1,19 +1,7 @@
-var myArray = [];
-myArray [0] = 8;
-myArray [0] = "hello";
+//Keyword THIS - refers to whatever object currently owns that space that we use to THIS keyword in
 
 
-
-
-var myCar = new Object(); //creating new Object
-myCar.maxSpeed = 50;       //creating a properties of an object myCar
-myCar.driver = "Shaun";   //creating a properties of an object myCar
-console.log(myCar.driver);
-
-myCar.drive = function(){console.log("Now driving");};
-myCar.drive();
-
-
+console.log(this); //window is an object that keyword THIS refer to
 
 var myCar2 = {
     
@@ -21,10 +9,37 @@ var myCar2 = {
     driver:"Tomek", 
     drive:function(speed, time){
         console.log(speed * time);
-    } 
+    },
+    test:function(){
+        console.log(this);
+    }
 
 };
 
+
+
+var myCar3 = {
+    
+    maxSpeed: 70, 
+    driver:"Shaun", 
+    drive:function(speed, time){
+        console.log(speed * time);
+    },
+    test:function(){
+        console.log(this);
+        /*console.log(myCar3);  //its the same and U can use this but it have meaning in creating a function  */
+    },
+    logDriver:function(){
+        console.log("Driver name is " + this.driver);
+    }
+
+};
+
+
+myCar2.test();
+myCar3.test();
 console.log(myCar2.maxSpeed);
 myCar2.drive(50,3);
+myCar3.logDriver();
+
 
